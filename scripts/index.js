@@ -160,11 +160,12 @@ const editTask = (e) => {
     var taskCard = e.target.parentNode.parentNode.parentNode;
   }
 
-  var title = taskCard.childNodes[3].childNodes[1];
-  var desc = taskCard.childNodes[3].childNodes[3];
-  var type = taskCard.childNodes[3].childNodes[5].childNodes[1];
+  var title = taskCard.childNodes[3].childNodes[3];
+  var desc = taskCard.childNodes[3].childNodes[5];
+  var type = taskCard.childNodes[3].childNodes[7].childNodes[1];
   var btn = taskCard.childNodes[5].childNodes[1];
-
+  
+  console.log(title);
   title.setAttribute("contenteditable", "true");
   desc.setAttribute("contenteditable", "true");
   type.setAttribute("contenteditable", "true");
@@ -186,9 +187,9 @@ const saveChanges = (e) => {
     var taskCard = e.target.parentNode.parentNode.parentNode;
   }
 
-  var title = taskCard.childNodes[3].childNodes[1];
-  var desc = taskCard.childNodes[3].childNodes[3];
-  var type = taskCard.childNodes[3].childNodes[5].childNodes[1];
+  var title = taskCard.childNodes[3].childNodes[3];
+  var desc = taskCard.childNodes[3].childNodes[5];
+  var type = taskCard.childNodes[3].childNodes[7].childNodes[1];
   var btn = taskCard.childNodes[5].childNodes[1];
 
   const updatedArray = task.map(({ id }) =>
